@@ -6,16 +6,28 @@ public class Cards {
     public Cards(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
-    }
 
-    enum Suit {
-        Hearts, Clubs, Diamonds, Spades;
-
-
+        var cardHealth = suit.value;
+        //make variable card health = suit.value
     }
 
     enum Rank {
-        Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King
+        Teeth(5), claws(6), fist(7), legs(8), head(9), tail(10);
+
+        final int value;
+        Rank(int value){
+            this.value = value;
+        }
+
+    }
+
+    enum Suit {
+        crow(5), monkey(6), frog(7), cat(8), dog(9), eagle(10), turtle(11);
+
+        final int value;
+        Suit(int value){
+            this.value = value;
+        }
 
     }
 
